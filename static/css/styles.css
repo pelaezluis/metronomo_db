@@ -1,0 +1,32 @@
+.body-login {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 300px;
+}
+
+.tabla-canciones {
+    margin-top: 15px;
+}
+
+.add-songs {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-login {
+    text-align: center;
+    align-items: center;
+}
+
+.login {
+    text-align: center;
+}
+
+.input-login {
+    margin-top: 4em;
+    text-align: center;
+    padding: 2em;
+}

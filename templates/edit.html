@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Metrónomo DB | Canciones
+{% endblock %}
+
+{% block content %}
+<div class="tabla-canciones">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Canción</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cancion in canciones %}
+                <tr>
+                    <td>{{cancion.cancion}}</td>
+                    <td>
+                        <div>
+                            <a class="btn btn-primary" href="/edit/{{ cancion.id }}" type="submit">Editar</a>
+                            <a class="btn btn-danger" href="/delete/{{ cancion.id }}" type="submit">Eliminar</a>
+                        </div>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

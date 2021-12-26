@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Metrónomo DB | editar canción
+{% endblock %}
+
+{% block content %}
+<div class="add-songs">
+    <form action="/edit/{{ cancion.id }}" method="post">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Canción</label>
+            <input name='cancion' type="text" class="form-control" id="formGroupExampleInput" value="{{ cancion.cancion}}">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">BPM</label>
+            <input name="bpm" type="text" class="form-control" id="formGroupExampleInput2" value="{{ cancion.bpm }}">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-success">Actualizar</button>
+          </div>
+    </form>
+</div>
+{% endblock %}

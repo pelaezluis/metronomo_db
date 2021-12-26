@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Metrónomo | Agregar canción
+{% endblock %}
+
+{% block content %}
+<div class="add-songs">
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Canción</label>
+            <input required name='cancion' type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingresa la canción">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">BPM</label>
+            <input required name="bpm" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingresa el BPM">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+    </form>
+</div>
+{% endblock %}

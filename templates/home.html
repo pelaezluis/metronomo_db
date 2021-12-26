@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Metrónomo DB
+{% endblock %}
+
+{% block content %}
+<div class="tabla-canciones">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Canción</th>
+                <th scope="col">BPM</th>
+                <th scope="col">Play</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cancion in canciones %}
+                <tr>
+                    <td>{{cancion.cancion}}</td>
+                    <td>{{cancion.bpm}}</td>
+                    <td><img src="https://img.icons8.com/ios-glyphs/30/000000/play--v1.png" /></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
