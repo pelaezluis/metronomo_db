@@ -11,6 +11,7 @@
             <tr>
                 <th scope="col">Canción</th>
                 <th scope="col">BPM</th>
+                <th scope="col">Compás</th>
                 <th scope="col">Play</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <tr>
                     <td>{{cancion.cancion}}</td>
                     <td>{{cancion.bpm}}</td>
+                    <td>{{cancion.compas}}</td>
                     <td><img onclick="play();" src="https://img.icons8.com/ios-glyphs/30/000000/play--v1.png" /></td>
                 </tr>
             {% endfor %}
