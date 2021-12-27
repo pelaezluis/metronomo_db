@@ -1,12 +1,21 @@
 import mysql.connector
 
+
+# Local
 db = mysql.connector.connect(
     host='localhost',
-    #host='luispelaez.mysql.pythonanywhere-services.com/luispelaez$metronomo_db',
     user='dev',
     password='Lp12345678',
     database='metronomo_db'
 )
+
+# Hosting
+# db = mysql.connector.connect(
+#     host='luispelaez.mysql.pythonanywhere-services.com/',
+#     user='luispelaez',
+#     password='Lp12345678',
+#     database='luispelaez$metronomo_db'
+# )
 
 cursor = db.cursor(dictionary=True)
 

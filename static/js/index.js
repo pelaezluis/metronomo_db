@@ -1,0 +1,1 @@
+const play = () => alert('Aquí se reproducirá el beat');

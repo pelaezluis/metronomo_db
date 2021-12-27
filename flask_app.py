@@ -1,5 +1,4 @@
 from flask import Flask, redirect, render_template, url_for, request
-#import mysql.connector
 from src.db import Cancion
 
 app = Flask(__name__)
