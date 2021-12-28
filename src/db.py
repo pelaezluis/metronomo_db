@@ -48,10 +48,10 @@ class Cancion:
         res = cursor.fetchall()
         return res
 
-    def add(self, cancion, bpm):
+    def add(self, cancion, bpm, compas):
         db, cursor = self.connection()
-        sql = "insert into Cancion(cancion, bpm) values (%s, %s)"
-        values = (cancion, bpm)
+        sql = "insert into Cancion(cancion, bpm, compas) values (%s, %s, %s)"
+        values = (cancion, bpm, compas)
         cursor.execute(sql, values)
         db.commit()
 
@@ -62,10 +62,10 @@ class Cancion:
         res = cursor.fetchone()
         return res
 
-    def edit(self, id, cancion, bpm):
+    def edit(self, id, cancion, bpm, compas):
         db, cursor = self.connection()
-        sql = f"update Cancion set cancion=%s, bpm=%s where id = {id}"
-        values = (cancion, bpm)
+        sql = f"update Cancion set cancion=%s, bpm=%s, compas=%s where id = {id}"
+        values = (cancion, bpm, compas)
         cursor.execute(sql, values)
         db.commit()
 

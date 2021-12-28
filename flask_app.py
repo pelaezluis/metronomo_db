@@ -24,7 +24,8 @@ def add_song():
         insert = Cancion()
         cancion = request.form['cancion']
         bpm = request.form['bpm']
-        insert.add(cancion, bpm)
+        compas = request.form['compas']
+        insert.add(cancion, bpm, compas)
         return redirect(url_for('home'))
 
 @app.route('/edit', methods=['GET'])
@@ -43,7 +44,8 @@ def edit_song(id):
         edit = Cancion()
         cancion = request.form['cancion']
         bpm = request.form['bpm']
-        edit.edit(id, cancion, bpm)
+        compas = request.form['compas']
+        edit.edit(id, cancion, bpm, compas)
         return redirect(url_for('home'))
 
 @app.route('/delete/<id>', methods=['GET','POST'])
